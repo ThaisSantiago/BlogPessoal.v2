@@ -1,1 +1,115 @@
-<p>inicio works!</p>
+<div class="container-fluid">
+
+ <div class="row bg-secondary d-flex-items-center">
+    <div class="col-md-6">
+
+        <div class="row d-flex justify-content-center">
+             <div class="col-md-6 text-white">
+                <h1 class="fs-54"> Seja bem vindo(a)!</h1>
+                <h5 class="fs-18">expresse aqui os seus pensamentos e opiniões!</h5>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center mt-3 mb-5">
+             <div class="col-md-6">
+              <button class="btn btn-light mr-2" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
+                <a class="btn btn-outline-light" href="#postagens">Ver Postagens</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center">
+            <img src="https://i.imgur.com/qcK5dwG.png" alt="animação blog digital" 
+            width="500px" height="500px">
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container mb-5 mb-5" id="postagens">
+<!--Nav-->
+    <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
+
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active text-secondary font-weight-bold" id="pills-home-tab" data-toggle="pill" href="#todasPostagens" 
+          role="tab" aria-controls="todasPostagens" aria-selected="true">Todas as Postagens</a>
+        </li>
+
+
+        <li class="nav-item" role="presentation">
+          <a class="nav-link text-secondary font-weight-bold" id="pills-profile-tab" data-toggle="pill" href="#minhasPostagens" 
+          role="tab" aria-controls="minhasPostagens" aria-selected="false">Minhas Postagens</a>
+        </li>
+
+
+        <li class="nav-item" role="presentation">
+          <a class="nav-link text-secondary font-weight-bold" id="pills-contact-tab" data-toggle="pill" href="#postagensTema" 
+          role="tab" aria-controls="postagensTema" aria-selected="false">Postagens por tema</a>
+        </li>
+      </ul>
+<!--/Nav-->
+
+
+      <div class="tab-content" id="pills-tabContent">
+
+        <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="todasPostagens">Todas Postagens</div>
+        
+        <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="minhasPostagens">Minhas Postagens</div>
+        
+        <div class="tab-pane fade" id="postagensTema" role="tabpanel" aria-labelledby="postagensTema">Postagens por tema</div>
+      </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Nova Postagem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+
+        <div class="form-group">
+          <label for="titulo">Título</label>
+          <input type="text" class="form-control" id="titulo" placeholder="Digite o título">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Texto</label>
+          <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Escolha um tema ou <a href="">cadastre um novo</a>:</label>
+          <select class="form-control" name="tema" id="tema"></select>
+          <option value="">Temas</option>
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
